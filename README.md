@@ -9,6 +9,6 @@ Conncet the Go App with redis cache
   <ul>
     <li> Clone the repo </li> 
     <li> <code> cd redis-go </code> </li>
-    <li> run <code> go mod tidy </code> : download all the dependecy </li>
+    <li> run <code> go mod tidy</code>   To download all the dependency </li>
     <li> <code> go run main.go </code> </li>
   </ul>
