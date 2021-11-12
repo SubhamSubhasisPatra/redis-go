@@ -2,7 +2,7 @@
 
 Conncet the Go App with redis cache 
 
-## Pre-requisite : 
+## Prerequisite : 
   <h3> Make sure <b><i><a href="https://golang.org/doc/"> Go </a></i></b> is installed and <b><i><a href="https://redis.io/clients#go"> Redis </a></i></b> is runnin in the post <code> 6379 </code> </h3>
 
 ## steps : 
