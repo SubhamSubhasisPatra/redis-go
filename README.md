@@ -1,5 +1,7 @@
 # redis-go
 
+[![CodeFactor](https://www.codefactor.io/repository/github/subhamsubhasispatra/redis-go/badge)](https://www.codefactor.io/repository/github/subhamsubhasispatra/redis-go)
+
 Conncet the Go App with redis cache 
 
 ## Prerequisite : 
