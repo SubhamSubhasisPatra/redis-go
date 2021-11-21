@@ -57,17 +57,12 @@ func postAuther(c *gin.Context) {
 
 func getAutherById(c *gin.Context) {
 	id := c.Param("id")
-	json, err := client.HGetAll(ctx, id).Result()
+	// json, err := client.HGetAll(ctx, id).Result()
+	json, err := client.Exists(ctx, id).Result()
 	if err != nil {
 		panic(err)
 	}
-	// var auther Author
-	// err = json.Unmarshal([]byte(json), &auther)
-	// err = json.Unmarshal(json)
-	if err != nil {
-		panic(err)
-	}
-	if len(json) == 0 {
+	if json == 0 {
 		c.IndentedJSON(http.StatusNotFound, gin.H{"message": "auther not found"})
 	} else {
 		c.IndentedJSON(http.StatusOK, json)
