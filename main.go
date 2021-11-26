@@ -58,6 +58,7 @@ func postAuther(c *gin.Context) {
 func getAutherById(c *gin.Context) {
 	id := c.Param("id")
 	// json, err := client.HGetAll(ctx, id).Result()
+	// resturs 1 if present else returns 0 
 	json, err := client.Exists(ctx, id).Result()
 	if err != nil {
 		panic(err)
