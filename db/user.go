@@ -1,8 +1,6 @@
 package db
 
 import (
-	"fmt"
-
 	"github.com/go-redis/redis/v8"
 )
 
@@ -23,12 +21,12 @@ func (db *Database) SaveUser(user *User) error {
 	}
 	pipe := db.Client.TxPipeline()
 	pipe.ZAdd(Ctx, "leaderboard", member)
-	rank := pipe.ZRank(Ctx, leaderboardKey, user.Username)
+	// rank := pipe.ZRank(Ctx, leaderboardKey, user.Username)
 	_, err := pipe.Exec(Ctx)
 	if err != nil {
 		return err
 	}
-	fmt.Println(rank.Val(), err)
-	user.Rank = int(rank.Val())
+	// fmt.Println(rank.Val(), err)
+	// user.Rank = int(rank.Val())
 	return nil
 }
